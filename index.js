@@ -8,8 +8,8 @@ module.exports = (options) => {
 
   let app = express()
 
-  app.use(graphqlHTTP(options))
   app.use(cors());
+  app.use(graphqlHTTP(options))
 
   let server = awsServerlessExpress.createServer(app)
 
